@@ -27,7 +27,7 @@
                         setCard.color = color;
                         setCard.pattern = pattern; // set the shading pattern
                         setCard.number = [NSNumber numberWithInt:i]; // set the number of symbols
-                        //[self addCard:setCard atTop:YES];
+                        [self addCard:setCard atTop:YES];
                         NSLog(@"SetCard Symbol: %@ Number: %@ Color: %@ Pattern: %@", setCard.symbol, setCard.number, setCard.color, setCard.pattern);
                         //NSLog(@"SetCardDeck - card: %@", setCard.description);
                     }
