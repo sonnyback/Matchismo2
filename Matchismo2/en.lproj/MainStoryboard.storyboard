@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5922" y="-245"/>
+            <point key="canvasLocation" x="-6232" y="-319"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="k3W-id-C1n">
@@ -350,7 +350,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUE-xz-BDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5930" y="-306"/>
+            <point key="canvasLocation" x="-6238" y="-309"/>
         </scene>
         <!--Set Game View Controller - Set-->
         <scene sceneID="Xm2-a5-8Xc">
@@ -689,63 +689,41 @@
                         <outlet property="currentStatusLabel" destination="uRE-Cw-S3Y" id="vhn-vS-9cy"/>
                         <outlet property="flipsLabel" destination="IH6-HU-TF9" id="u4d-AY-c1b"/>
                         <outlet property="scoreLabel" destination="Kh4-8g-OmO" id="7zm-Nn-lP6"/>
-                        <outletCollection property="setButtons" destination="1PK-vs-kRE" id="OpL-B2-h7K"/>
-                        <outletCollection property="setButtons" destination="gql-i2-dwd" id="trf-Ne-2zN"/>
-                        <outletCollection property="setButtons" destination="v8f-Mt-qPm" id="3qz-dJ-e9p"/>
-                        <outletCollection property="setButtons" destination="1BI-dP-zba" id="SdQ-6K-f4K"/>
-                        <outletCollection property="setButtons" destination="GaB-nt-yGf" id="oXL-La-9qQ"/>
-                        <outletCollection property="setButtons" destination="Kna-SW-6y9" id="a7n-B3-45N"/>
-                        <outletCollection property="setButtons" destination="0rE-yd-83g" id="fc7-Xe-3fa"/>
-                        <outletCollection property="setButtons" destination="dd4-rU-2Fs" id="tGC-h6-f8D"/>
-                        <outletCollection property="setButtons" destination="VAX-Kv-LeL" id="EaW-nd-tyC"/>
-                        <outletCollection property="setButtons" destination="pub-PC-QHa" id="zX1-e2-iBl"/>
-                        <outletCollection property="setButtons" destination="Rxb-U4-GoW" id="EhA-Ew-0qr"/>
-                        <outletCollection property="setButtons" destination="aIl-dT-HWB" id="Hij-v8-yhx"/>
-                        <outletCollection property="setButtons" destination="7mj-I1-aMF" id="pSY-uI-G5K"/>
-                        <outletCollection property="setButtons" destination="FFp-5J-GHx" id="4GF-Vp-XJZ"/>
-                        <outletCollection property="setButtons" destination="f3I-c2-0rN" id="d5D-cF-vZL"/>
-                        <outletCollection property="setButtons" destination="o9v-gI-bAJ" id="C9H-Mx-npl"/>
-                        <outletCollection property="setButtons" destination="Kpu-M3-MXc" id="Y8K-0e-6a4"/>
-                        <outletCollection property="setButtons" destination="jnG-If-3BR" id="cph-Sa-hPF"/>
-                        <outletCollection property="setButtons" destination="7c1-Ta-u6C" id="2FP-uW-jDq"/>
-                        <outletCollection property="setButtons" destination="SdI-OZ-m9N" id="5Xy-2F-YJP"/>
-                        <outletCollection property="setButtons" destination="HDa-Ij-uUJ" id="bu1-ji-m9A"/>
-                        <outletCollection property="setButtons" destination="PuD-SJ-Boq" id="CIK-wQ-241"/>
-                        <outletCollection property="setButtons" destination="bWt-rC-HWH" id="tX2-vc-Sto"/>
-                        <outletCollection property="setButtons" destination="3d6-pl-AU1" id="PSD-q1-UdV"/>
+                        <outletCollection property="gameButtons" destination="1PK-vs-kRE" id="b2N-24-2J1"/>
+                        <outletCollection property="gameButtons" destination="gql-i2-dwd" id="Zh8-KV-8uC"/>
+                        <outletCollection property="gameButtons" destination="v8f-Mt-qPm" id="IH5-hX-ENc"/>
+                        <outletCollection property="gameButtons" destination="1BI-dP-zba" id="XKD-CP-kLu"/>
+                        <outletCollection property="gameButtons" destination="GaB-nt-yGf" id="0Ed-9d-XYK"/>
+                        <outletCollection property="gameButtons" destination="Kna-SW-6y9" id="2Yh-pS-fhU"/>
+                        <outletCollection property="gameButtons" destination="0rE-yd-83g" id="9pZ-jY-qbo"/>
+                        <outletCollection property="gameButtons" destination="dd4-rU-2Fs" id="2pQ-L0-I94"/>
+                        <outletCollection property="gameButtons" destination="VAX-Kv-LeL" id="za4-aN-AGs"/>
+                        <outletCollection property="gameButtons" destination="pub-PC-QHa" id="8hg-Qe-7a6"/>
+                        <outletCollection property="gameButtons" destination="Rxb-U4-GoW" id="8u9-P2-fmp"/>
+                        <outletCollection property="gameButtons" destination="aIl-dT-HWB" id="v6P-XP-xCm"/>
+                        <outletCollection property="gameButtons" destination="7mj-I1-aMF" id="whO-Bb-6Y2"/>
+                        <outletCollection property="gameButtons" destination="FFp-5J-GHx" id="Puo-0w-Pzb"/>
+                        <outletCollection property="gameButtons" destination="f3I-c2-0rN" id="A77-56-sIg"/>
+                        <outletCollection property="gameButtons" destination="o9v-gI-bAJ" id="7cJ-wn-aWm"/>
+                        <outletCollection property="gameButtons" destination="Kpu-M3-MXc" id="2Qc-wv-1MS"/>
+                        <outletCollection property="gameButtons" destination="7c1-Ta-u6C" id="76a-Q0-cIS"/>
+                        <outletCollection property="gameButtons" destination="jnG-If-3BR" id="A3t-QV-pbd"/>
+                        <outletCollection property="gameButtons" destination="SdI-OZ-m9N" id="n0u-4u-ouN"/>
+                        <outletCollection property="gameButtons" destination="HDa-Ij-uUJ" id="jzo-fq-hYb"/>
+                        <outletCollection property="gameButtons" destination="PuD-SJ-Boq" id="SyM-eP-A7n"/>
+                        <outletCollection property="gameButtons" destination="bWt-rC-HWH" id="kP6-5R-JIR"/>
+                        <outletCollection property="gameButtons" destination="3d6-pl-AU1" id="5n7-61-zhg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4f4-PK-To9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6005" y="-218"/>
+            <point key="canvasLocation" x="-6232" y="-275"/>
         </scene>
     </scenes>
     <resources>
         <image name="diamonds_card_black.png" width="30" height="30"/>
         <image name="spades_card_black.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="CardGameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CardGameViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="flipCard:" candidateClass="UIButton"/>
-                <relationship kind="action" name="resetGame:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="currentStatusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="cardButtons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SetGameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetGameViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="currentStatusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="setButtons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

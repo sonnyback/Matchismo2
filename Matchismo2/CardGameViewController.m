@@ -16,7 +16,7 @@
 @property (nonatomic) int flipCount;
 /* Important note: outlets allow the controller to talk to the view. Actions let the view talk to the controller*/
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons; // outlet collection of card buttons
-//@property (strong, nonatomic) CardMatchingGame *game; // property for our model object
+@property (strong, nonatomic) CardMatchingGame *game; // property for our model object
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel; // for displaying the score
 @property (weak, nonatomic) IBOutlet UILabel *currentStatusLabel; // displays current status. Assignment 1, task 3
 @property (weak, nonatomic) UIImage *cardBackImage; // for card back image, assignment 1, task 7
@@ -34,7 +34,7 @@
 // getter method for *game with lazy instantiation
 - (CardMatchingGame *)game {
     
-    //NSLog(@"Getter method for game object...");
+    //NSLog(@"Getter method for game...");
     // initialize with designated initializer from CardMatchingGame. Card count comes from # of buttons in the view
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
                                                           usingDeck:[[PlayingCardDeck alloc] init]];
@@ -81,11 +81,10 @@
  */
 - (void)updateUI {
     
-    NSLog(@"Updating UI...");
+    NSLog(@"UpdateUI...");
     
     for (UIButton *cardButton in self.cardButtons) {
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]]; // *Important - this maps the UI to the model!
-        //NSLog(@"Current card is:::: %@", card.contents);
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
         [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
         cardButton.selected = card.isFaceUp; // set the card to be face up

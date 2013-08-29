@@ -15,28 +15,48 @@
 @interface SetGameViewController()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel; // for dispplaying # of flips
 @property (nonatomic) int flipCount;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *setButtons;
-//@property (strong, nonatomic) CardMatchingGame *setGame;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *gameButtons;
+@property (strong, nonatomic) CardMatchingGame *setGame;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel; // for displaying the score
 @property (weak, nonatomic) IBOutlet UILabel *currentStatusLabel; // displays current status
 @end
 
 // private properties/methods implemented here. Actions go here as well.
 @implementation SetGameViewController
-//@synthesize setGame = _setGame;
+@synthesize setGame = _setGame;
+@synthesize gameButtons = _gameButtons;
 
 // getter method with lazy instantiation
-/*- (CardMatchingGame *)game {
+- (CardMatchingGame *)setGame {
     
-    NSLog(@"setGame...");
+    //NSLog(@"Getter method for setGame...");
     if (!_setGame){
         // uncomment once we have the count and deck defined
-        _setGame = [[CardMatchingGame alloc] initWithCardCount:[self.setButtons count]
-                                                     usingDeck:[self createSetDeck]];
+        _setGame = [[CardMatchingGame alloc] initWithCardCount:[self.gameButtons count]
+                                                     usingDeck:[[SetCardDeck alloc] init]];
     }
     
     return _setGame;
-}*/
+}
+
+- (void)setGameButtons:(NSArray *)gameButtons {
+    
+    NSLog(@"Entered setGameButtons...");
+    _gameButtons = gameButtons;
+
+    [self updateSetGameUI];
+}
+
+- (void)updateSetGameUI {
+    
+    NSLog(@"updateSetGameUI");
+    
+    for (UIButton *setButton in self.gameButtons) {
+        Card *card = [self.setGame cardAtIndex:[self.gameButtons indexOfObject:setButton]];
+        [setButton setTitle:card.description forState:UIControlStateSelected];
+        [setButton setTitle:card.description forState:UIControlStateSelected|UIControlStateDisabled];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,7 +71,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self createSetDeck];
+    
 }
 
 - (void)didReceiveMemoryWarning

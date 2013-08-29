@@ -16,7 +16,7 @@
     NSLog(@"SetCardDeck.init!");
     
     self = [super init]; // initialize super class
-    
+    int counter = 1; // just for testing. remove once deck is working properly.
     if (self) {
         for (int i = 1; i <= 3; i++)
             for (NSString *symbol in [SetCard validSymbols])
@@ -24,12 +24,13 @@
                     for (NSString *pattern in [SetCard validPatterns]) {
                         SetCard *setCard = [[SetCard alloc] init];
                         setCard.symbol = symbol; // set the symbol
-                        setCard.color = color;
+                        setCard.color = color; // set the color
                         setCard.pattern = pattern; // set the shading pattern
                         setCard.number = [NSNumber numberWithInt:i]; // set the number of symbols
-                        //[self addCard:setCard atTop:YES];
-                        NSLog(@"SetCard Symbol: %@ Number: %@ Color: %@ Pattern: %@", setCard.symbol, setCard.number, setCard.color, setCard.pattern);
-                        //NSLog(@"SetCardDeck - card: %@", setCard.description);
+                        [self addCard:setCard atTop:YES];
+                        counter++;
+                        //NSLog(@"SetCard Symbol: %@ Number: %@ Color: %@ Pattern: %@", setCard.symbol, setCard.number, setCard.color, setCard.pattern);
+                        //NSLog(@"SetCardDeck - card: %d is %@", counter, setCard.contents);
                     }
     }
     

@@ -11,5 +11,5 @@
 
 @interface CardGameViewController : UIViewController
 
-@property (strong, nonatomic) CardMatchingGame *game; // property for our model object
+//@property (strong, nonatomic) CardMatchingGame *game; // property for our model object
 @end

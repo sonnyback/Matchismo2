@@ -12,7 +12,7 @@
 @implementation PlayingCardDeck
 
 - (id)init {
-    
+     NSLog(@"PlayingCardDeck.init!");
     /**IMPORTANT! An initializer such as this is the ONLY time we assign a value to self!**/
     self = [super init];
     
