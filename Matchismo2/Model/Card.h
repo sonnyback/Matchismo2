@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *contents;
 @property (nonatomic, getter=isFaceUp) BOOL faceUp;
+@property (nonatomic, getter = isSelected) BOOL selected;
 @property (nonatomic, getter = isUnplayable) BOOL unplayable;
 
 - (int)match:(NSArray *)otherCards;

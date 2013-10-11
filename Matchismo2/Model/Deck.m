@@ -48,7 +48,8 @@
  */
 - (Card *)drawRandomCard {
     
-    NSLog(@"Entered drawRandomCard");
+    //NSLog(@"Entered drawRandomCard");
+    
     Card *randomCard = nil;
     //NSLog(@"cards array size is %lu", (unsigned long)[self.cards count]); // count is not a property so we call method notation
     

@@ -15,10 +15,12 @@
 @property (strong, nonatomic) NSString *symbol;
 @property (strong, nonatomic) NSString *color;
 @property (strong, nonatomic) NSString *pattern;
+@property (strong, nonatomic) UIColor *colors2;
 
 + (NSArray *)validSymbols;
 + (NSArray *)validColors;
 + (NSArray *)validPatterns;
 + (NSArray *)validNumbers;
++ (NSDictionary *)validColors2;
 
 @end

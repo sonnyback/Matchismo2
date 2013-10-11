@@ -11,13 +11,15 @@
 
 @interface CardMatchingGame : NSObject
 
-// designated initializer. Only initialized when/if called
+// designated initializer. Only initialized if called
 - (id)initWithCardCount:(NSUInteger)cardCount
               usingDeck:(Deck *)deck;
 
 - (void)flipCardAtIndex:(NSUInteger)index;
 
 - (Card *)cardAtIndex:(NSUInteger)index;
+
+- (void)selectSetCardAtIndex:(NSUInteger)index;
 
 // readonly is only for the public api (no setter method)
 @property (nonatomic, readonly) int score;
